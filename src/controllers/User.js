@@ -14,17 +14,14 @@
  */
 
 const fakeUsers = [
-    {name: "Joselito", email: 'joselito@mail.com'}
+    {
+        name: "Wilson",
+        email: "wilson69@mail.com"
+    }
 ];
 
 async function ListUser(req, res) {
-    res.status(200)
-    const response = await fetch('https://http.dog/200.jpg');
-    const imagem = await response.text()
-    const headers = new Map;
-    headers.set('Content-type', "image/jpg")
-    res.setHeaders(headers);
-    res.send(Buffer.from(imagem));
+    res.send(fakeUsers);
 }
 
 function CreateUser(req, res) {
